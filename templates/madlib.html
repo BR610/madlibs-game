@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="/static/madlibs.css">
@@ -14,4 +14,18 @@ When {{ person }} went to pick it up, it burst into flames in a totally
 {{ pet }}{% endfor %}!
 </div>
 </body>
-</html>
+</html> -->
+
+{% extends 'template_inheritance.html' %}
+{% block title %}Your Finished Madlib{% endblock %}
+
+{% block content %}
+<div class="madlib">
+There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
+When {{ person }} went to pick it up, it burst into flames in a totally
+{{ adjective }} way, and he said he loves
+
+{% for pet in pets %}
+{{ pet }}{% endfor %}!
+</div>
+{% endblock %}

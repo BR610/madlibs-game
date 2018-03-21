@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="/static/madlibs.css">
@@ -14,4 +14,13 @@
 </form>
 
 </body>
-</html>
+</html> -->
+
+{% extends 'template_inheritance.html' %}
+{% block title %}Hi There!{% endblock %}
+{% block content %}
+<form action="/greet">
+  What is your name? <input type="text" name="person">
+  <input type="submit">
+</form>
+{% endblock %}

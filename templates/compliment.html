@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="/static/madlibs.css">
@@ -13,4 +13,18 @@
         <br><br><button type="submit">SUBMIT</button>
     </form>
 </body>
-</html>
+</html> -->
+
+{% extends 'template_inheritance.html' %}
+{% block title %}A Compliment -- HI I'M DIFFERENT NOW{% endblock %}
+
+{% block content %}
+Hi {{ person }}! I think you're{% for item in compliment %} {{ item }}{% endfor %}!
+    <form action="/game">
+        <br><br>Would you like to play a game?
+        <br><input type="radio" name="wants_game" value="True"> YES
+        <br>NO <input type="radio" name="wants_game" value="False">
+        <br><br><button type="submit">SUBMIT</button>
+    </form>
+    {% endblock %}
+

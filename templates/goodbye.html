@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="/static/madlibs.css">
@@ -7,4 +7,11 @@
 <body>
 <div>Sorry to see you go! Goodbye.</div>
 </body>
-</html>
+</html> -->
+
+{% extends 'template_inheritance.html' %}
+{% block title %}Goodbye{% endblock %}
+
+{% block content %}
+<div>Sorry to see you go! Goodbye.</div>
+{% endblock %}

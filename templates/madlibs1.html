@@ -1,0 +1,25 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/madlibs.css">
+    <title>Your Finished Madlib</title>
+</head>
+<body>
+<div class="madlib">
+{{ person }} woke up one morning to find they had turned {{ color }}! "Oh no!"" {{ person }} shouted, I am dying, who will take care of my {% for pet in pets %}{{ pet }}{% endfor %}!?""
+
+Then, {{ person }} found a {{ adjective }} {{ noun }} in their car, and realized this was all a dream!
+</div>
+</body>
+</html> -->
+
+{% extends 'template_inheritance.html' %}
+{% block title %}Your Finished Madlib{% endblock %}
+
+{% block content %}
+<div class="madlib">
+{{ person }} woke up one morning to find they had turned {{ color }}! "Oh no!"" {{ person }} shouted, I am dying, who will take care of my {% for pet in pets %}{{ pet }}{% endfor %}!?""
+
+Then, {{ person }} found a {{ adjective }} {{ noun }} in their car, and realized this was all a dream!
+</div>
+{% endblock %}
