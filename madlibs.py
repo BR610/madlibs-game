@@ -42,7 +42,7 @@ def greet_person():
                            compliment=compliment)
 
 
-@app.route('/game', methods = ['POST'])
+@app.route('/game')
 def show_madlib_form():
     """Show user the madlibs form!"""
 

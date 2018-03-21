@@ -20,12 +20,20 @@ When {{ person }} went to pick it up, it burst into flames in a totally
 {% block title %}Your Finished Madlib{% endblock %}
 
 {% block content %}
-<div class="madlib">
-There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
-When {{ person }} went to pick it up, it burst into flames in a totally
-{{ adjective }} way, and he said he loves
+    <div class="madlib">
+    There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
+    When {{ person }} went to pick it up, it burst into flames in a totally
+    {{ adjective }} way, and he said he loves
 
-{% for pet in pets %}
-{{ pet }}{% endfor %}!
-</div>
+
+    {% if pets|length == 1 %}
+        {{ pet }}
+    {% elif pets|length == 2 %}
+        {% for pet in enumerate(pets) %}{% endfor %} and {% for pet in enumerate(pets) %}{% endfor %}
+    {% else %}
+        {% for pet in pets %}
+            {{ pet }}
+        {% endfor %}!
+    {% endif %}
+    </div>
 {% endblock %}
